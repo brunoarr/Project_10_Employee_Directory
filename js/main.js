@@ -39,8 +39,9 @@ $.ajax({
     $('.employee').on('click', openmodal);
     function openmodal(){
       //content of the modal
-      console.log(event.target.id);
-      var id = (event.target.id);
+      //console.log(event.target.id);
+      console.log($(this).attr('id'));
+      //var employeenumber = $(this).attr('id');
       modal.style.display = "block";
     }
 
