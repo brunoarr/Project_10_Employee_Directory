@@ -13,17 +13,21 @@ ul, li {
 }
 
 .wraper{
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .name {
   font-size: 18px;
   font-weight: bold;
+}
+
+.capitalize:first-letter {
+  text-transform:capitalize;
 }
 
 .other-info {
@@ -34,29 +38,96 @@ ul, li {
 .employee {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   border: solid 1px #CCCCCC;
   border-radius: 5px;
   background-color: #ffffff;
   width: 100%;
-  margin: 20px 0;
+  margin: 15px;
+  cursor: pointer;
 }
 
 .avatar {
   border-radius: 50%;
   height: 100px;
+  padding: 20px;
+}
+
+.avatar-modal {
+  border-radius: 50%;
+  height: 140px;
   padding: 20px 0;
 }
 
+/* ////////////////
+ MEDIA QUERIES
+ ////////////*/
+
 @media only screen and (min-width: 768px) {
   .employee {
-    width: 45%;
+    width: 40%;
+    min-width: 380px;
+    max-width: 550px;
   }
+
 }
 
 @media only screen and (min-width: 992px) {
   .employee {
     width: 30%;
+    min-width: 380px;
+    max-width: 550px;
   }
+  .wrapper {
+    width: 90%;
+  }
+}
+
+/* ////////////////
+ THE MODAL POPUP
+ ////////////*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    max-width: 300px;
+    transition: 1s;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
