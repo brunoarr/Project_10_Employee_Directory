@@ -26,10 +26,6 @@ ul, li {
   font-weight: bold;
 }
 
-.capitalize:first-letter {
-  text-transform:capitalize;
-}
-
 .other-info {
   font-size: 14px;
   color: grey;
