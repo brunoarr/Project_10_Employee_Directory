@@ -67,7 +67,7 @@ $.ajax({
       $('#modalhtml').html(modalHTML);
     }
 
-    //When the user clicks (x), close the modal
+    //When the user clicks (x), close the modal.
     modal.onclick = (e) => {
       if (e.target.className == 'close') {
         modal.style.display = "none";
